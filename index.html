@@ -34,12 +34,12 @@
                 </nav>
             </div>
             <!-- Navbar smartphone button burger -->
-            <button
+            <div
                 class="fixed block top-[15px] right-[15px] z-[100] rounded burger h-[50px] w-[50px] header-home-bg md:hidden">
-                <div class="relative bar_container">
+                <div class="relative top-[50%] translate-y-[-50%] bar_container">
                     <span class="bar"></span>
                 </div>
-            </button>
+            </div>
         </div>
     </header>
 
@@ -47,13 +47,13 @@
     <main>
         <!-- Home -->
         <section id="home">
-            <div id="" class="absolute top-0 z-[-100] h-screen overflow-hidden">
+            <div class="absolute top-0 z-[-100] h-screen overflow-hidden">
                 <img id="mobileHeroImg"
                     src="./Images/Mobile_workplace-with-smartphone-laptop-on-black-table-top-view-copyspace-background-min.jpg"
-                    alt="Photo de bureau" class="heroImg h-[900px] object-cover md:hidden ">
+                    alt="Photo de bureau smartphone" class="heroImg h-[900px] object-cover md:hidden ">
                 <img id="desktopHeroImg"
                     src="./Images/workplace-with-smartphone-laptop-on-black-table-top-view-copyspace-background-min.jpg"
-                    alt="Photo de bureau" class="heroImg object-cover md:block md:h-full md:w-auto lg:h-auto lg:m-full">
+                    alt="Photo de bureau desktop" class="heroImg object-cover md:block md:h-full md:w-auto lg:h-auto lg:m-full">
             </div>
             <div class="container">
                 <div class="flex flex-col items-center justify-center h-screen">
@@ -67,17 +67,16 @@
         <section id="about" class="bg-white">
             <div class="container spacing-section w-3/4 m-auto">
                 <div class="flex flex-col gap-10 justify-center items-center">
+                    <h2 class="h2-content">About</h2>
                     <img src="./Images/20220621_1433141x1-min.jpg" alt="Photo de profil"
                         class="rounded-full h-[150px] w-[150px] m-10 shadow-xl">
-                        
-                    <h2 class="h2-content">About</h2>
                     <p class="text-center">Salut , je m’appelle Yannis et suis <em class="em">passionné</em> par
                         l'informatique depuis <em class="em">toujours</em>. <br><br>
-                        C’est après 10 ans de travaillent dans différentes <em class="em">entreprises</em> que je me
+                        C’est après 10 ans de travail dans différentes <em class="em">entreprises</em> que je me
                         lance aujourd'hui dans une <em class="em">reconversion</em>, développeur web. <br><br>
                         En fin de parcours OpenClassrooms, je suis à la recherche d'une <em class="em">alternance</em>.
                         <br><br>
-                        N’hésiter pas a me contacter !
+                        N’hésité pas à me contacter !
                     </p>
                     <a href="#contact" class="btn-content w-[130px]">Me contacter</a>
                 </div>
@@ -91,12 +90,12 @@
                     <div class="portfolio_container max-w-[700px]">
                         <!-- Slide Portfolio -->
                         <div class="portfolio_slide">
-                            <img class="img_slide" src="./Images/portfolio/Capture d’écran (21).png" alt="Play">
+                            <img class="img_slide" src="./Images/portfolio/play_template_tailwind.png" alt="Play">
                             <div class="link_slide">
                                 <div class="text_slide relative">
                                     <span
                                         class="absolute top-[10px] left-[50%] translate-x-[-50%] bg-white w-[60px] h-[2px]"></span>
-                                    <a href="" class="link-info">
+                                    <a href="https://github.com/stoyek/Play__Tailwind_training" class="link-info">
                                         <div>
                                             <h3 class="h3_slide">Play</h3>
                                             <span class="separator"></span>
@@ -113,7 +112,7 @@
                                 <div class="text_slide relative">
                                     <span
                                         class="absolute top-[10px] left-[50%] translate-x-[-50%] bg-white w-[60px] h-[2px]"></span>
-                                    <a href="" class="link-info">
+                                    <a href="https://github.com/stoyek/BerthouYannis_4_30032021" class="link-info">
                                         <div>
                                             <h3 class="h3_slide">La Chouette Agence</h3>
                                             <span class="separator"></span>
@@ -130,7 +129,7 @@
                                 <div class="text_slide relative">
                                     <span
                                         class="absolute top-[10px] left-[50%] translate-x-[-50%] bg-white w-[60px] h-[2px]"></span>
-                                    <a href="" class="link-info">
+                                    <a href="https://github.com/stoyek/BerthouYannis_3_12022021" class="link-info">
                                         <div>
                                             <h3 class="h3_slide">Oh My Food</h3>
                                             <span class="separator"></span>
@@ -231,21 +230,24 @@
                     <h2 class="h2-content">Contact</h2>
                     <div class="flex flex-col md:flex-row md:flex-wrap gap-20">
                         <div class="flex flex-col gap-20">
-                            <a href="">
+                            <a href="https://www.linkedin.com/in/yannis-berthou/" class="flex flex-col items-center">
+                                <p>Linkedin</p>
                                 <i class="contact_icon fa-brands fa-linkedin"></i>
                             </a>
-                            <a href="">
+                            <a href="https://twitter.com/yannis_berthou" class="flex flex-col items-center">
+                                <p>Twitter</p>
                                 <i class="contact_icon fa-brands fa-square-twitter"></i>
                             </a>
                         </div>
                         <div class="flex flex-col gap-20">
-                            <a href="">
+                            <a href="https://github.com/stoyek" class="flex flex-col items-center">
+                                <p>Github</p>
                                 <i class="contact_icon fa-brands fa-github"></i>
                             </a>
-                            <button
-                                onClick="location.href='mailto:berthou.yannis@gmail.com?subject=[Portfolio]-RecrutementWeb'">
+                            <a href="mailto:berthou.yannis@gmail.com?subject=[Portfolio]-RecrutementWeb" class="flex flex-col items-center">
+                                <p>Send Mail</p>
                                 <i class="contact_icon fa-solid fa-envelope"></i>
-                                <button />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -254,11 +256,11 @@
     </main>
     <footer class="bg-blue-dark">
         <div class="container pt-5 pb-2">
-            <div class="flex flex-col items-start gap-1 flex-wrap">
-                <p class="p-2 text-orange-gray hover:text-orange">Berthou Yannis</p>
-                <button onclick="location.href='mailto:berthou.yannis@gmail.com'">
-                    <p class="p-2 text-orange-gray hover:text-orange">berthou.yannis@gmail.com</p>
-                </button>
+            <div class="flex flex-col items-start flex-wrap gap-1">
+                <p class="text-orange-gray hover:text-orange">Berthou Yannis</p>
+                <p class="text-orange-gray hover:text-orange">Développeur Web - Junior</p>
+                <a href="mailto:berthou.yannis@gmail.com" class="text-orange-gray hover:text-orange">berthou.yannis@gmail.com</a>
+                <a href="https://fontawesome.com/" class="text-orange-gray hover:text-orange">Font Awesome</a>
             </div>
         </div>
     </footer>

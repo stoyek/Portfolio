@@ -1,7 +1,7 @@
 // --Toogle Menu START
-toggleMenu();
-console.log('nyu ?');
+console.log("nyu ?");
 
+toggleMenu();
 
 function toggleMenu() {
   const navbar = document.querySelector(".navbar_container");
@@ -9,25 +9,28 @@ function toggleMenu() {
   const bar = document.querySelector(".bar_container");
   const main = document.querySelector("main");
   const text = document.querySelectorAll(".nav_text");
-
+  
+  // Close menu on link click
   for (let i = 0; i < text.length; i++) {
-    text[i].addEventListener("click", () =>{
+    text[i].addEventListener("click", () => {
       if (navbar.classList.contains("show-nav")) {
         openCloseNav();
       }
-    })
+    });
   }
-  // Close menu
-  main.addEventListener("click", () =>{
-    if(navbar.classList.contains("show-nav")){
+  // Close menu on page click
+  main.addEventListener("click", () => {
+    if (navbar.classList.contains("show-nav")) {
       openCloseNav();
     }
-  })
-  
+  });
+
+  // Open menu on burger click
   burger.addEventListener("click", () => {
     openCloseNav();
   });
-  
+
+  // open and close menu function
   function openCloseNav() {
     bar.classList.toggle("align");
     navbar.classList.toggle("show-nav");
@@ -43,6 +46,7 @@ function closeMenu() {}
 // --Animation visible START
 isScrolledInTOView();
 
+// Skill progress bar animation
 function isScrolledInTOView() {
   let cards = document.querySelector("#hardSkills");
   let progressBar = document.querySelectorAll(".progress_bar");
@@ -64,6 +68,7 @@ function navScroll() {
   const sections = document.querySelectorAll("section");
   const navLi = document.querySelectorAll(".navLi");
 
+  // Listen onScroll and give attribute to current
   window.addEventListener("scroll", () => {
     let current = "";
     sections.forEach((section) => {
@@ -74,6 +79,7 @@ function navScroll() {
       }
     });
 
+    // Reset all sections class and add active to current class
     let i;
     for (i = 0; i < sections.length; i++) {
       navLi[i].classList.remove("active");
@@ -108,7 +114,6 @@ function showSlides(n) {
   let toggleInfo = document.querySelectorAll(".link_slide");
   let dots = document.querySelectorAll(".dot");
 
-  
   // Boucle slides
   if (n > slides.length) {
     slideIndex = 1;
@@ -120,10 +125,8 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
     dots[i].style.backgroundColor = "#F8F8F8";
-    // toggleInfo[i].classList.remove("toggle-info");
   }
-  
-  console.log("a/ n:", n, "SlideIndex: ", slideIndex);
+
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].style.backgroundColor = "#D66853";
   slides[slideIndex - 1].addEventListener("click", () => {

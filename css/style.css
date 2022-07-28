@@ -49,7 +49,7 @@ body {
 }
 
 .header-home-bg {
-  @apply bg-white-blue;
+  @apply bg-white;
 }
 .header-home-text {
   @apply text-orange;
