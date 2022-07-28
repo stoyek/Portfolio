@@ -1,37 +1,228 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', 'sans-serif';
-    color: white;
-    background-color: rgb(39, 39, 39);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+}
+body {
+  @apply text-blue-dark;
+  font-family: "Inter", sans-serif;
 }
 
-a{
-    text-decoration: none;
-    color: white;
+.container{
+  @apply m-auto lg:max-w-[1000px];
+}
+.spacing-section {
+  @apply py-20 px-2 md:py-28 md:px-5;
 }
 
-header{
-    width: 100%;
-    border: solid 1px red;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
+.nav_text {
+  @apply text-orange font-bold text-xl ease-in-out duration-300;
+}
+.nav_text:hover {
+  @apply tracking-widest ml-2;
+}
+.navbar {
+  @apply ease-in-out duration-500 opacity-0 shadow-lg;
 }
 
-#name{
-    font-size: 25px;
-    margin: 10px;
+.navLi{
+  @apply md:py-1 md:px-4 ease-in-out duration-300 md:rounded-lg;
+}
+.active{
+  @apply md:bg-blue-dark text-white  md:bg-opacity-80 md:shadow-inner
 }
 
-nav{
-    margin 10px;
-    display: flex;
-    border: solid 1px black;
-    align-items: center;
+.show-nav .navbar {
+  @apply right-[15px] opacity-100;
 }
-nav a{
-    margin: 5px;
-    border: solid 2px purple;
+.bar {
+  @apply relative m-auto block;
+  width: 30px;
+  height: 3px;
+  background: #d66853;
+  border-radius: 5px;
+  transition: all 0.4s cubic-bezier(0.5, -0.5, 0.5, 1.5);
+}
+
+.header-home-bg {
+  @apply bg-white-blue;
+}
+.header-home-text {
+  @apply text-orange;
+}
+
+.bar::before,
+.bar::after {
+  @apply absolute left-0;
+  content: "";
+  width: 30px;
+  height: 3px;
+  background: #d66853;
+  border-radius: 5px;
+  transition: all 0.4s cubic-bezier(0.5, -0.5, 0.5, 1.5);
+}
+.bar::before {
+  transform: translateY(-10px);
+}
+.bar::after {
+  transform: translateY(10px);
+}
+.align .bar::before {
+  transform: translateY(-1px);
+}
+.align .bar::after {
+  transform: translateY(1px);
+}
+.cross .bar {
+  background-color: transparent;
+}
+.cross .bar::before {
+  transform: rotate(45deg);
+}
+.cross .bar::after {
+  transform: rotate(-45deg);
+}
+
+.h2-content {
+  @apply font-bold text-xl border-b-2 border-[#fff] ease-in-out duration-300;
+}
+.h2-content:hover {
+  @apply text-blue-light border-b-2 border-blue-light;
+}
+
+.em {
+  @apply font-semibold text-blue-dark not-italic;
+}
+
+.btn-content {
+  @apply text-orange rounded-lg header-home-bg flex items-center justify-center py-2 duration-150 font-bold shadow;
+}
+.btn-content:hover {
+  @apply shadow-inner tracking-wide bg-orange text-white-blue;
+}
+
+/* Portfolio Style */
+
+/* Swipe */
+.portfolio_container {
+  @apply relative w-full;
+}
+.portfolio_slide {
+  display: none;
+  @apply w-7/12 md:w-6/12 m-auto relative h-[600px] overflow-hidden rounded-xl;
+}
+.img_slide {
+  @apply h-full object-cover;
+}
+.text_slide {
+  @apply absolute px-5 py-8 h-1/3 rounded-xl bg-blue-dark bg-opacity-80 w-full backdrop-blur-sm duration-300;
+  bottom: -180px;
+}
+
+.link-info{
+  @apply flex flex-col justify-between h-full;
+}
+
+.toggle-info .text_slide{
+  bottom: 0;
+}
+
+.h3_slide{
+  @apply text-xl font-bold text-orange;
+}
+.separator{
+  width: 0;
+  @apply block h-[2px] my-2 bg-white-blue ease-in-out duration-300;
+}
+
+.text_slide:hover .separator{
+  width: 25%
+}
+.text_slide:hover .git{
+  @apply text-orange;
+}
+
+/* Previous and next buttons */
+.prev,
+.next {
+  @apply absolute bottom-[15%] rounded-lg text-4xl px-3 bg-blue-dark text-orange bg-opacity-80 cursor-pointer ease-in-out duration-300;
+}
+.prev {
+  @apply left-5;
+}
+.next {
+  @apply right-5;
+}
+.prev:hover, .next:hover{
+  @apply bg-opacity-100
+}
+
+/* Dot */
+.dot {
+  background-color: #F8F8F8;
+  @apply h-[15px] w-[15px] cursor-pointer m-1 inline-block rounded-full ease-in-out duration-300;
+}
+
+.dot:hover{
+  @apply bg-orange;
+}
+
+/* Skill Style */
+
+/* Progress Bar */
+.progress{
+  @apply relative h-[30px]
+}
+
+.progress_status{
+  @apply block h-[7px] rounded-full absolute bottom-0 border border-white-blue;
+}
+.progress_full{
+ @apply w-full bg-white shadow-inner;
+}
+.progress_bar{
+ @apply bg-orange w-0;
+ ;
+}
+
+.progress_anime{
+  animation: load 1s ease-in-out forwards
+}
+
+/* Contact */
+.contact_icon{
+  @apply text-6xl text-blue-gray opacity-90 hover:opacity-100 hover:text-orange duration-300 ease-in-out
+}
+
+@keyframes load {
+  0% {width: 0;}
+  100%{width: 100%;}
+}
+
+/* Soft_Skill */
+.soft_skills_text{
+  @apply text-xl hover:tracking-tighter duration-300;
+}
+
+/* Media Queries */
+@media all and (min-width: 600px){
+  .heroImg{
+    @apply w-full h-auto
+  }
+}
+
+@media all and (min-width: 768px){
+  .navbar{
+    @apply left-[50%] translate-x-[-50%] opacity-100 bg-opacity-70 backdrop-blur;
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1130px) {
+  #desktopHeroImg{
+    height: 950px;
+  }  
 }

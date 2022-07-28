@@ -1,31 +1,269 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="white">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/style.css">
     <title>Berthou Yannis</title>
 </head>
+
 <body>
-    <header>
-        <p id="name">Yannis Berthou</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Header -->
+    <header class="container m-auto">
+        <div class="">
+            <a href="./index.html"
+                class="md:hidden absolute h-[50px] w-[125px] header-home-bg top-[15px] left-[15px] rounded-lg flex items-center justify-center">
+                <p class="text-2xl font-bold header-home-text">&lt;/YB&gt;</p>
+            </a>
+            <!-- Navbar -->
+            <div class="navbar_container">
+                <nav
+                    class="navbar z-[100] fixed top-[15px] right-[-200px] rounded-lg w-[195px] md:w-[630px] header-home-bg">
+                    <ul class="flex flex-col md:flex-row justify-between gap-[20px] md:gap[0px] m-[20px] md:m-[2px]">
+                        <li class="home navLi active"><a href="#home" class="nav_text">Home</a></li>
+                        <li class="about navLi"><a href="#about" class="nav_text">About</a></li>
+                        <li class="portfolio navLi"><a href="#portfolio" class="nav_text">Portfolio</a></li>
+                        <li class="skill navLi"><a href="#skill" class="nav_text">Skill</a></li>
+                        <li class="contact navLi"><a href="#contact" class="nav_text">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Navbar smartphone button burger -->
+            <button
+                class="fixed block top-[15px] right-[15px] z-[100] rounded burger h-[50px] w-[50px] header-home-bg md:hidden">
+                <div class="relative bar_container">
+                    <span class="bar"></span>
+                </div>
+            </button>
+        </div>
     </header>
 
-    <!-- <main>
-        <section class="about">About</section>
-        <section class="work">Work</section>
-        <section class="contact">Contact</section>
-    </main> -->
+    <!-- Main -->
+    <main>
+        <!-- Home -->
+        <section id="home">
+            <div id="" class="absolute top-0 z-[-100] h-screen overflow-hidden">
+                <img id="mobileHeroImg"
+                    src="./Images/Mobile_workplace-with-smartphone-laptop-on-black-table-top-view-copyspace-background-min.jpg"
+                    alt="Photo de bureau" class="heroImg h-[900px] object-cover md:hidden ">
+                <img id="desktopHeroImg"
+                    src="./Images/workplace-with-smartphone-laptop-on-black-table-top-view-copyspace-background-min.jpg"
+                    alt="Photo de bureau" class="heroImg object-cover md:block md:h-full md:w-auto lg:h-auto lg:m-full">
+            </div>
+            <div class="container">
+                <div class="flex flex-col items-center justify-center h-screen">
+                    <h1 class="text-white text-2xl font-bold">Yannis Berthou</h1>
+                    <h2 class="text-white text-base font-bold">Développeur Web - Fullstack</h2>
+                    <a href="#about" class="mt-[30px] btn-content w-[120px]">Qui suis-je ?</a>
+                </div>
+            </div>
+        </section>
+        <!-- About -->
+        <section id="about" class="bg-white">
+            <div class="container spacing-section w-3/4 m-auto">
+                <div class="flex flex-col gap-10 justify-center items-center">
+                    <img src="./Images/20220621_1433141x1-min.jpg" alt="Photo de profil"
+                        class="rounded-full h-[150px] w-[150px] m-10 shadow-xl">
+                        
+                    <h2 class="h2-content">About</h2>
+                    <p class="text-center">Salut , je m’appelle Yannis et suis <em class="em">passionné</em> par
+                        l'informatique depuis <em class="em">toujours</em>. <br><br>
+                        C’est après 10 ans de travaillent dans différentes <em class="em">entreprises</em> que je me
+                        lance aujourd'hui dans une <em class="em">reconversion</em>, développeur web. <br><br>
+                        En fin de parcours OpenClassrooms, je suis à la recherche d'une <em class="em">alternance</em>.
+                        <br><br>
+                        N’hésiter pas a me contacter !
+                    </p>
+                    <a href="#contact" class="btn-content w-[130px]">Me contacter</a>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio -->
+        <section id="portfolio" class="bg-white-blue">
+            <div class="container spacing-section">
+                <div class="flex flex-col items-center justify-between gap-10">
+                    <h2 class="h2-content">Portfolio</h2>
+                    <div class="portfolio_container max-w-[700px]">
+                        <!-- Slide Portfolio -->
+                        <div class="portfolio_slide">
+                            <img class="img_slide" src="./Images/portfolio/Capture d’écran (21).png" alt="Play">
+                            <div class="link_slide">
+                                <div class="text_slide relative">
+                                    <span
+                                        class="absolute top-[10px] left-[50%] translate-x-[-50%] bg-white w-[60px] h-[2px]"></span>
+                                    <a href="" class="link-info">
+                                        <div>
+                                            <h3 class="h3_slide">Play</h3>
+                                            <span class="separator"></span>
+                                        </div>
+                                        <p class="block text-md text-white">Integration avec tailwinds css</p>
+                                        <span class="git text-md text-white duration-300 ">Github &#x2794;</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio_slide">
+                            <img class="img_slide" src="./Images/portfolio/Chouette_Mobile.png" alt="Play">
+                            <div class="link_slide">
+                                <div class="text_slide relative">
+                                    <span
+                                        class="absolute top-[10px] left-[50%] translate-x-[-50%] bg-white w-[60px] h-[2px]"></span>
+                                    <a href="" class="link-info">
+                                        <div>
+                                            <h3 class="h3_slide">La Chouette Agence</h3>
+                                            <span class="separator"></span>
+                                        </div>
+                                        <p class="block text-md text-white">SEO et Accessibilité</p>
+                                        <span class="git text-md text-white duration-300">Github &#x2794;</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio_slide">
+                            <img class="img_slide" src="./Images/portfolio/OhMyFood_Mobile.png" alt="Play">
+                            <div class="link_slide">
+                                <div class="text_slide relative">
+                                    <span
+                                        class="absolute top-[10px] left-[50%] translate-x-[-50%] bg-white w-[60px] h-[2px]"></span>
+                                    <a href="" class="link-info">
+                                        <div>
+                                            <h3 class="h3_slide">Oh My Food</h3>
+                                            <span class="separator"></span>
+                                        </div>
+                                        <p class="block text-md text-white">Integration avec Sass et animation</p>
+                                        <span class="git text-md text-white duration-300">Github &#x2794;</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
-    <footer>Footer</footer>
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+
+                    <!-- The dots/circles -->
+                    <div class="text-center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-info fa-xl text-blue-light animate-spin"></i>
+                        <p class="text-lg font-semibold">Et plein d'autre à Venir</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skill" class="bg-white">
+            <div class="container spacing-section">
+                <div class="flex flex-col items-center gap-10">
+                    <h2 class="h2-content">Skill</h2>
+                    <div id="hardSkills" class="w-10/12 hover:shadow-lg duration-300 ease-in-out rounded-2xl p-10">
+                        <h3 class="mb-6 font-semibold">Hard-Skills</h3>
+                        <div class="flex flex-col gap-5">
+                            <div class="progress">
+                                <p>TailwindCSS</p>
+                                <span class="progress_status progress_full"></span>
+                                <div class="progress_status w-9/12">
+                                    <span class="progress_status progress_bar"></span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <p>MySQL</p>
+                                <span class="progress_status progress_full"></span>
+                                <div class="progress_status w-3/12">
+                                    <span class="progress_status progress_bar"></span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <p>ReactJS</p>
+                                <span class="progress_status progress_full"></span>
+                                <div class="progress_status w-6/12">
+                                    <span class="progress_status progress_bar"></span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <p>NodeJS</p>
+                                <span class="progress_status progress_full"></span>
+                                <div class="progress_status w-10/12">
+                                    <span class="progress_status progress_bar"></span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <p>VueJs</p>
+                                <span class="progress_status progress_full"></span>
+                                <div class="progress_status w-8/12">
+                                    <span class="progress_status progress_bar"></span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/stoyek"
+                                class="flex items-center gap-2 text-orange hover:text-blue-light">
+                                <i class="fa-brands fa-github"></i>
+                                <p>Github</p>
+                                <p>&rarr;</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-10/12 hover:shadow-lg duration-300 ease-in-out hover:bg-white rounded-2xl p-10">
+                        <h3 class="mb-6 font-semibold">Soft-Skills</h3>
+                        <div class="flex flex-wrap gap-6">
+                            <p class="soft_skills_text font-bold">&#129300; Curieux</p>
+                            <p class="soft_skills_text">Autodidacte</p>
+                            <p class="soft_skills_text">Observateur</p>
+                            <p class="soft_skills_text font-bold">Polyvalant</p>
+                            <p class="soft_skills_text text-2xl">Calme &#128578;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="relative">
+            <span class="block h-full w-1/2 bg-white-blue absolute top-0 left-0 z-[-10]"></span>
+            <span class="block h-full w-1/2 bg-white absolute top-0 right-0 z-[-10]"></span>
+            <div class="container spacing-section">
+                <div class="flex flex-col items-center gap-20">
+                    <h2 class="h2-content">Contact</h2>
+                    <div class="flex flex-col md:flex-row md:flex-wrap gap-20">
+                        <div class="flex flex-col gap-20">
+                            <a href="">
+                                <i class="contact_icon fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="">
+                                <i class="contact_icon fa-brands fa-square-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="flex flex-col gap-20">
+                            <a href="">
+                                <i class="contact_icon fa-brands fa-github"></i>
+                            </a>
+                            <button
+                                onClick="location.href='mailto:berthou.yannis@gmail.com?subject=[Portfolio]-RecrutementWeb'">
+                                <i class="contact_icon fa-solid fa-envelope"></i>
+                                <button />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-blue-dark">
+        <div class="container pt-5 pb-2">
+            <div class="flex flex-col items-start gap-1 flex-wrap">
+                <p class="p-2 text-orange-gray hover:text-orange">Berthou Yannis</p>
+                <button onclick="location.href='mailto:berthou.yannis@gmail.com'">
+                    <p class="p-2 text-orange-gray hover:text-orange">berthou.yannis@gmail.com</p>
+                </button>
+            </div>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/f6c4359624.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
